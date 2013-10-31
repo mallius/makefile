@@ -1,0 +1,10 @@
+all: main.o mytool1.o mytool2.o
+	gcc -o $@ $^
+main.o: main.c 
+	gcc -c $<
+mytool1.o: mytool1.c 
+	gcc -c $<
+mytool2.o: mytool2.c
+	gcc -c $<
+clean:
+	rm -rf all *.o
